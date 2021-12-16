@@ -1,0 +1,36 @@
+.container {
+    width: 500px;
+    height: 500px;
+    perspective: 500px;
+    margin: 0px;
+    position: relative;
+}
+.cube {
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+    margin-left: 300px;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+
+.cube:hover {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+.cube > div {
+    width: 300px;
+    height: 300px;
+    opacity: .5;
+    border: 2px solid #000000;
+    position: absolute;
+}
+.front  { transform: translateZ(150px); }
+.right  { transform: rotateY(180deg) translateZ(150px); }
+.back   { transform: rotateY(90deg) translateZ(150px); }
+.left   { transform: rotateY(-90deg) translateZ(150px); }
+.top    { transform: rotateX(-90deg) translateZ(150px); }
+.bottom { transform: rotateX( 90deg) translateZ(150px); }
